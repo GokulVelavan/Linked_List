@@ -90,6 +90,16 @@ namespace Linked_List
                 temp.next = node;
             }
         }
+
+        public void RemoveFirst()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("The List Is Empty");
+            }
+            Console.WriteLine("Deleted Node: " + this.head.data);
+            this.head = this.head.next;
+        }
     }
 
 
