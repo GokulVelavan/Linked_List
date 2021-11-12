@@ -122,9 +122,25 @@ namespace Linked_List
             }
             newNode.next = null;
             return head;
-
         }
+
+        internal Node Search(int value)
+        {
+
+
+            while (this.head != null)
+            {
+                if (this.head.data == value)
+                {
+                    Console.WriteLine("Node is Present");
+                    return this.head;
+                }
+                this.head = this.head.next;
+            }
+            Console.WriteLine("Node is not Present");
+
+            return null;
+        }
+
     }
-
-
 }
