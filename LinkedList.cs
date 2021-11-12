@@ -124,22 +124,30 @@ namespace Linked_List
             return head;
         }
 
-        internal Node Search(int value)
+        internal int Search(int value)
         {
 
-
-            while (this.head != null)
+            int position = 1;
+            Node temp = head;
+            while (temp!= null)
             {
-                if (this.head.data == value)
+                if (temp.data == value)
                 {
                     Console.WriteLine("Node is Present");
-                    return this.head;
+                    return position;
                 }
-                this.head = this.head.next;
+                position++;
+                temp = temp.next;
             }
             Console.WriteLine("Node is not Present");
+            return 0;
+        }
 
-            return null;
+        internal void InsertNewNode(int search_val,int insert_val)
+        {
+            int n = Search(search_val);
+            InsertBetween(n,insert_val);
+
         }
 
     }
