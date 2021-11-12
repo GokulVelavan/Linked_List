@@ -100,6 +100,30 @@ namespace Linked_List
             Console.WriteLine("Deleted Node: " + this.head.data);
             this.head = this.head.next;
         }
+
+        internal Node RemoveLastNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+
+            }
+            Node newNode = this.head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+
+            }
+            newNode.next = null;
+            return head;
+
+        }
     }
 
 
