@@ -19,7 +19,7 @@ namespace Linked_List
             obj1.Display();
             obj1.InsertBetween(1, 30);
             obj1.Display();
-            obj1.RemoveFirst();
+            obj1.RemoveLastNode();
             obj1.Display();
 
 
