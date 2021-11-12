@@ -12,17 +12,12 @@ namespace Linked_List
         {
             Console.WriteLine("Welcome to LinedList");
 
-            //  UC2_Insert_First obj1 = new UC2_Insert_First();
-            //  obj1.InsertFirst(70);
-            //  obj1.InsertFirst(30);
-            //  obj1.InsertFirst(56);
-            //  obj1.Display();
 
-
-            UC3_Append obj1 = new UC3_Append();
-            obj1.Append(56);
-            obj1.Append(30);
-            obj1.Append(70);
+            LinkedList obj1 = new LinkedList();
+            obj1.Add(56);
+            obj1.Add(70);
+            obj1.Display();
+            obj1.InsertBetween(1, 30);
             obj1.Display();
 
 
