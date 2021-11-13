@@ -20,8 +20,7 @@ namespace Linked_List
             obj1.Add(70);
             obj1.Display();
 
-            obj1.Search_Delete(40);
-            Console.WriteLine();
+            obj1.SortList();
             obj1.Display();
 
             Console.ReadLine();
