@@ -15,11 +15,11 @@ namespace Linked_List
 
             LinkedList obj1 = new LinkedList();
             obj1.Add(56);
+            obj1.Add(30);
             obj1.Add(70);
             obj1.Display();
-            obj1.InsertBetween(1, 30);
+            obj1.InsertNewNode(30, 40);
             obj1.Display();
-            obj1.Search(30);
 
             Console.ReadLine();
         }
