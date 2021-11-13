@@ -143,7 +143,11 @@ namespace Linked_List
             return 0;
         }
 
+<<<<<<< HEAD
         internal void InsertNewNode(int search_val, int insert_val)
+=======
+        internal void InsertNewNode(int search_val,int insert_val)//program to find the present element and insert after the index
+>>>>>>> a63901f49e1c5c11ca3a3df0cdc6c9c21a74cbd4
         {
             int n = Search(search_val);
             InsertBetween(n, insert_val);
