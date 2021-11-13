@@ -129,7 +129,7 @@ namespace Linked_List
 
             int position = 1;
             Node temp = head;
-            while (temp!= null)
+            while (temp != null)
             {
                 if (temp.data == value)
                 {
@@ -143,12 +143,49 @@ namespace Linked_List
             return 0;
         }
 
-        internal void InsertNewNode(int search_val,int insert_val)
+        internal void InsertNewNode(int search_val, int insert_val)
         {
             int n = Search(search_val);
-            InsertBetween(n,insert_val);
+            InsertBetween(n, insert_val);
 
         }
 
+        internal void Size()
+        {
+            Node temp = head;
+            int position = 1;
+            while(temp!=null)
+            {
+                temp = temp.next;
+                position++;
+            }
+            Console.WriteLine("size,{0}", position-1);
+
+        }
+        internal void Search_Delete(int value)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("List is Empty");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.next.data == value)//when the data is found it will enter the condition
+                    {
+                        temp.next = temp.next.next;
+                        Console.WriteLine("Deleted");
+
+                        Size();//program to find size
+
+                        break;
+                    }
+                    temp = temp.next;
+
+                }
+            }
+        }
     }
 }
