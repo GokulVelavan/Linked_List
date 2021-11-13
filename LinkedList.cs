@@ -143,18 +143,14 @@ namespace Linked_List
             return 0;
         }
 
-<<<<<<< HEAD
         internal void InsertNewNode(int search_val, int insert_val)
-=======
-        internal void InsertNewNode(int search_val,int insert_val)//program to find the present element and insert after the index
->>>>>>> a63901f49e1c5c11ca3a3df0cdc6c9c21a74cbd4
         {
             int n = Search(search_val);
             InsertBetween(n, insert_val);
 
         }
 
-        internal void Size()
+        internal int Size()
         {
             Node temp = head;
             int position = 1;
@@ -164,6 +160,7 @@ namespace Linked_List
                 position++;
             }
             Console.WriteLine("size,{0}", position-1);
+            return position - 1;
 
         }
         internal void Search_Delete(int value)
@@ -191,5 +188,38 @@ namespace Linked_List
                 }
             }
         }
+
+        public void SortList()
+        {
+            Node node1 = head;
+            Node node2 = null;
+            int temp = 0;
+            int n = Size();
+            if (this.head == null)
+            {
+                Console.WriteLine("List Is Empty");
+            }
+            else
+            {
+                for (int i = 0; i < n - 2; i++)
+                {
+                    node2 = node1.next;
+                    for (int j = 0; j < n - 2; j++)
+                    {
+                        if (node1.data > node2.data)
+                        {
+                            temp = node2.data;
+                            node2.data = node1.data;
+                            node1.data = temp;
+                        }
+                        node2 = node2.next;
+                    }
+                    node1 = node1.next;
+                }
+            }
+            
+        }
+
+
     }
 }
